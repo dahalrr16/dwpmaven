@@ -1,0 +1,106 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+xmlns:context="http://www.springframework.org/schema/context"
+xmlns:mvc="http://www.springframework.org/schema/mvc" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:schemaLocation="
+    http://www.springframework.org/schema/beans     
+    http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+    http://www.springframework.org/schema/context 
+    http://www.springframework.org/schema/context/spring-context-3.0.xsd
+    http://www.springframework.org/schema/mvc
+    http://www.springframework.org/schema/mvc/spring-mvc-3.0.xsd">
+    
+    
+    
+    
+    
+    
+    
+    <!-- the following disclaimer gives the mvc:driven erro -->
+<!-- <?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:p="http://www.springframework.org/schema/p"
+    xmlns:context="http://www.springframework.org/schema/context"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+ 
+http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+ 
+ 
+http://www.springframework.org/schema/context
+ 
+ 
+http://www.springframework.org/schema/context/spring-context-3.0.xsd">
+ -->
+
+<!-- End of problematic shcema -->
+
+
+
+
+
+
+
+
+
+
+<!-- <context:annotation-config />its optional -->
+ 
+    <context:component-scan
+        base-package="spring.mvc,spring.mvc2,spring.mvc3" />
+        
+        <!-- <?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	 xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+	 http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+
+ -->
+        
+        
+
+<!-- <bean  class="spring.mvc2.StudentController">
+
+
+<property name="book" ref="book" />
+</bean> -->
+
+<!-- 
+<bean id="book" name="book" class="spring.mvc.Book">
+<property name="subscription" ref="booksubs" />
+<property name="authorName" value="Raju Dahal"></property>
+<property name="pages" value="101"></property>
+<property name="price" value="101.01"></property>
+<property name="pageList">
+<list>
+<value > "page1"</value>
+<value > "page2"</value>
+
+</list>
+</property>
+</bean>
+
+
+<bean id="booksubs" class="obj.domain.Subscription">
+<property name="isbn"  value="12345"></property>
+<property name="type" value="English"></property>
+</bean> -->
+
+
+<bean id="viewResolver" class="org.springframework.web.servlet.view.InternalResourceViewResolver" >
+<property name="viewClass" value="org.springframework.web.servlet.view.JstlView"></property>
+<property name="prefix" value="/WEB-INF/Pages/"></property>
+<property name="suffix" value=".jsp"></property>
+</bean>
+
+
+<bean id="springContextLoader" name="springContextLoader" class="org.fidel.SpringContextLocator">
+</bean>
+
+<mvc:resources mapping="/resources/**" location="/resources/" />
+<!-- <mvc:resources mapping="/resources/**" location="/resources/mytheme/" /> 
+This line of code works. mytheme is scaped as the web-content is.-->
+ 
+	<mvc:annotation-driven />
+</beans>

@@ -1,0 +1,23 @@
+This project runs in Tomcat as well as JBoss 7.1.1. but shows status 404 in glassfish.
+There is some configuration needs to be checked for glassfish.
+
+
+When x.war file is created and installed via maven, packaged war file can be deployed
+separately and works well.
+Restful urls have been made using spring and Hibernate.
+Hibernate.cfg.xml, Entity Bean and spring controller have been used.
+
+
+JQuerry library and other javascript function have been put under resources in WebContent
+and mapped resources in spring-servlet.xml. JSTL Tag lib have been used to get those sources
+as used in TryJs.jsp.
+
+While mapping the controller "/" is optional while mapping class ie. RequestMapping("start")
+or RequestMapping("/start"). Both work. Same things apply before any method.
+
+
+While doing @Autowired annotation as used in spring.mvc3 package, 
+<bean class="org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor"/> should be used
+or <context:annotation-config /> should be used.
+Give much importance to the namespace definition, ok.
+Copy of DWPMaven is also made.

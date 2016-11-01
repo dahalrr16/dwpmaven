@@ -1,0 +1,72 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+xmlns:context="http://www.springframework.org/schema/context"
+xmlns:mvc="http://www.springframework.org/schema/mvc" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:schemaLocation="
+    http://www.springframework.org/schema/beans     
+    http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+    http://www.springframework.org/schema/context 
+    http://www.springframework.org/schema/context/spring-context-3.0.xsd
+    http://www.springframework.org/schema/mvc
+    http://www.springframework.org/schema/mvc/spring-mvc-3.0.xsd">
+    
+    
+
+<context:annotation-config />
+
+<bean id="book2" name="book2" class="spring.mvc.Book">
+<!-- <property name="subscription" ref="booksubs" /> -->
+<property name="authorName" value="LekhNath Dahal"></property>
+<property name="pages" value="101"></property>
+<property name="price" value="101.01"></property>
+<property name="pageList">
+<list>
+<value > "page1"</value>
+<value > "page2"</value>
+
+</list>
+</property>
+</bean>
+
+
+
+<bean id="subscription" name="subscription" class="spring.mvc.Subscription">
+<property name="isbn"  value="12345"></property>
+<property name="type" value="English"></property>
+</bean>
+
+
+<bean name="order" class="spring.mvc.Order">
+<property name="name" value="firstOrder"></property>
+</bean>
+
+<!-- <bean class="org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor"></bean> -->
+
+
+
+
+<!-- the below mentioned bean definitions are from Project 
+"SpringWithListOfObjectFindigingWhoWasAutoThief" -->
+
+<!-- <bean name="m" class="raj.spring.package2.Manager">
+<property name="tutor" ref="t"/>
+<property name="student" ref="student"/>
+</bean>
+
+<bean name="t" class="raj.spring.package2.Tutor"/>
+
+<bean name="student" class="raj.spring.package2.Student">
+<property name="car" ref="car"/>
+<property name="lastName" value="Raj"/>
+</bean>
+
+<bean name="car" class="raj.spring.package2.Car">
+<property name="name" value="Honda Accord"/>
+<property name="engine" ref="engine"/>
+</bean>
+
+<bean name="engine" class="raj.spring.package2.Engine">
+<property name="vinNumber" value="123456"/>
+</bean> -->
+<!-- End of the below mentioned -->
+</beans>

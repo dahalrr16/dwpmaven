@@ -1,0 +1,57 @@
+@CHARSET "ISO-8859-1";
+<style type="text/css">
+
+/* table,td,th
+{
+border:1px solid black;
+}
+
+table
+{
+width:30%;
+}
+
+th
+{
+height:25px;
+background: #fc9;
+}
+
+
+tbody { background: #9cf; } */
+
+
+.header {  
+border-bottom: medium;
+background: white;
+font-style: oblique;
+text-decoration:underline;
+text-shadow: blue;
+text-indent: 10px;
+}
+ 
+ .General{
+margin: 1em; border-collapse: collapse; }
+td, th { padding: .3em; border: 1px #ccc solid; }
+thead { background: #fc9; }
+tbody { background: #9cf; }
+#clickme tr.clicked { background: #ff0; 
+ 
+}
+
+
+.editableTable td { border:solid 1px; } 
+.editableTable .cellEditing { padding: 0; }
+ .editableTable .cellEditing input[type=text]{ width:100%; border:0; background-color:rgb(255,253,210); }
+
+
+.highlighted {
+    background: purple;
+}
+
+.comeBack {
+    background: #9cf;
+}
+
+
+</style>
