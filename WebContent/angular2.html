@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html ng-app="myApp" >
+<head>
+	<title>Hello World, AngularJS - Raj</title>
+	<script type="text/javascript"
+		src="C:/Users/a565292/Desktop/AngularJs/angular.min.js"></script>
+		<script src="C:/Users/a565292/Desktop/AngularJs/hello2.js"></script>
+
+</head>
+
+
+<body>
+<div ng-controller="myHttpGetController">
+  <input type="text" name="keyword" ng-model="keyword" required />
+ <button ng-click="GetAllData()">Get All Data</button>
+
+<!--<p ng-bind="Details"></p>-->
+    {{Details}}
+<!-- Country id:{{ Details.id}} -->
+  
+  <ul>
+        <li ng-repeat="d in Details">		
+            {{ d.id + ' ,' + d.countryName + ', ' + d.population}}
+        </li>
+    </ul>
+		</div>
+		
+		
+		<div ng-controller="myHttpGetController2">
+  <input type="text" name="keyword" ng-model="keyword" required />
+ <button ng-click="GetAllData2()">Get All Data2</button>
+
+<!--<p ng-bind="Details"></p>-->
+    {{Details}}
+<!-- Country id:{{ Details.id}} -->
+  
+  <ul>
+        <li ng-repeat="d in Details">		
+            {{ d.id + ' ,' + d.countryName + ', ' + d.population}}
+        </li>
+    </ul>
+		</div>
+		
+		
+		
+		
+		
+	</body>
+</html>
