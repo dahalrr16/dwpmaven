@@ -5,6 +5,9 @@
 	<script type="text/javascript"
 		src="C:/Users/a565292/Desktop/AngularJs/angular.min.js"></script>
 		<script src="C:/Users/a565292/Desktop/AngularJs/hello2.js"></script>
+		<!--<script src="C:/Users/a565292/Desktop/AngularJs/jquery.min.js"></script>-->
+		<script src="C:/Users/a565292/Desktop/AngularJs/jquery-3.1.1.min.js"></script>
+		
 
 </head>
 
@@ -39,9 +42,27 @@
             {{ d.id + ' ,' + d.countryName + ', ' + d.population}}
         </li>
     </ul>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<!--http post div-->
+	
 		</div>
 		
-		
+		<div  ng-controller="myHttpPostController">
+    <p>Country id: <input type="text" name="id" ng-model="id" required /></p>
+    <p>Country Name: <input type="text" name="countryName" ng-model="countryName" required /></p>
+	   <p>Country Population: <input type="text" name="population" ng-model="population" required /></p>
+    <button ng-click="sendData()">sendData</button>
+    <hr />
+   Response: {{ PostDataResponse }}
+</div>
 		
 		
 		
