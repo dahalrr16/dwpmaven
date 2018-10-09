@@ -36,8 +36,8 @@
   <!-- by default it looks for /WEB-INF/applicationContext.xml, if you do not 
   provide any. You need to specify your own if you are using spring-servlet.xml when you use the ContextLoaderListener -->
   
-  
-  
+  <!-- Listener not needed for now  -->
+<!--   
   <listener>
         <listener-class>org.apache.logging.log4j.web.Log4jServletContextListener</listener-class>
     </listener>
@@ -48,7 +48,7 @@
     <listener-class>
   org.springframework.web.context.ContextLoaderListener
   </listener-class>
-  </listener>
+  </listener> -->
   
   <welcome-file-list>
     <welcome-file>index.html</welcome-file>
