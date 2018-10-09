@@ -246,6 +246,7 @@ end of dependencies for basic spring which requires 7 jars
 
 
 	<build>
+	<finalName>dwpmaven</finalName>
 		<plugins>
 			<plugin>
 				<artifactId>maven-compiler-plugin</artifactId>
