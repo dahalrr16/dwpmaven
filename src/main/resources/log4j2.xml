@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Configuration>
   <Properties>
-    <Property name="filename">${sys:framework.log.directory}/dwpmaven/dwpmaven.log</Property>
+    <Property name="filename">${sys:log.directory}/dwpmaven/dwpmaven.log</Property>
   </Properties>
  
  <!-- log.framework.directory=C:/Users/rajkumar/Desktop/LOGS -->
@@ -12,6 +12,9 @@
       <PatternLayout>
         <Pattern>%d{EEEE yyyy-MM-dd HH:mm:ss, SSS}[%t] %p %c %x -%m%n</Pattern>
       </PatternLayout>
+       <Policies>
+       <SizeBasedTriggeringPolicy size="20 MB" />
+       </Policies>
      
     </RollingFile>
   
